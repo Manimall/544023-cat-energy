@@ -2,7 +2,6 @@
 
 * Студент: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
-Обновил зависимости...
 
 ---
 

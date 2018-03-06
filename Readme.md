@@ -1,5 +1,3 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
-
 * Студент: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 

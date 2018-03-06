@@ -1,5 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/544023-cat-energy.svg)](https://greenkeeper.io/)
+
 * Студент: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 

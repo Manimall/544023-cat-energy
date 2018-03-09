@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин спортивного питания для котов "Cat-Energy"</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
 
@@ -29,9 +32,10 @@
 
         <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Показать/Скрыть Меню</span>
+          <span class="toggle__btn"></span>
         </button>
 
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--index">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
           </li>
@@ -51,9 +55,13 @@
 
       <div class="promo__wrapper container">
 
-        <h2 class="promo__content promo__title">Функциональное питание для котов</h2>
+        <h2 class="promo__content promo__title">Функциональное<br> питание для котов</h2>
         <p class="promo__content promo__text">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="img/raster/index-can-mobile@1x.png" srcset="img/raster/index-can-mobile@2x.png 2x" alt="Красивая упаковка основного продукта"  width="280" height="270">
+        <picture class="promo__img-wrapper">
+          <source media="(min-width: 1300px)" srcset="img/raster/index-can-desktop@1x.png 1x, img/raster/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/raster/index-can-tablet@1x.jpg 1x, img/raster/index-can-tablet@2x.jpg 2x">
+          <img class="promo__img" src="img/raster/index-can-mobile@1x.png" srcset="img/raster/index-can-mobile@2x.png 2x" alt="Красивая упаковка основного продукта" width="280" height="270">
+        </picture>
         <a class="promo__content promo__btn btn" href="form.html">Подобрать программу</a>
 
       </div>
@@ -71,7 +79,7 @@
 
         <article class="program__item program__item--slim">
           <h3 class="program__title">
-            <span class="porgram__icon program__icon--slim"></span>
+            <span class="program__icon program__icon--slim"></span>
             Похудение
           </h3>
 
@@ -141,12 +149,12 @@
             <div class="example__achievements">
 
               <div class="achievement">
-                <span class="achievemnt__title">Снижение веса</span>
+                <span class="achievement__title">Снижение<br> веса</span>
                 <span class="achievement__value">5 кг</span>
               </div>
 
               <div class="achievement">
-                <span class="achievement__title">Затрачено времени</span>
+                <span class="achievement__title">Затрачено<br> времени</span>
                 <span class="achievement__value">60 дней</span>
               </div>
 
@@ -184,7 +192,7 @@
 
           <div class="slider__actions">
             <label for="before" class="slider__btn slider__btn--before">Было</label>
-            <div class="slider__switcher">
+            <div class="slider__scale">
               <div class="slider__grip"></div>
             </div>
             <label for="after" class="slider__btn slider__btn--after">Стало</label>
@@ -213,9 +221,9 @@
 
       <div class="contacts__map-wrapper" id="map" aria-label="map">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <source media="(min-width: 1300px)" srcset="img/raster/bg-map-desktop@1x.png, img/raster/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/raster/bg-map-tablet@1x.png, img/raster/bg-map-tablet@2x.png 2x">
+          <img class="contacts__map-img" src="img/raster/bg-map-mobile@1x.png" srcset="img/raster/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </div>
 
@@ -275,7 +283,8 @@
 
   </footer>
 
-
+  <script src="js/dropdown-menu.js"></script>
+  <script src="js/slider.js"></script>
 
 </body>
 </html>

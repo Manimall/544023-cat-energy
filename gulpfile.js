@@ -17,6 +17,9 @@ var run = require("run-sequence");
 var del = require("del");
 var ghpages = require("gh-pages");
 
+// var onError = function (err) {
+// console.log(err);
+// };
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -32,7 +35,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["watch"], function() {
+gulp.task("serve", function () {
   server.init({
     server: "build/",
     notify: false,
@@ -41,8 +44,9 @@ gulp.task("serve", ["watch"], function() {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]).on("change", server.reload);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/js/*.js").on("change", server.reload);
 });
 
 gulp.task("watch", function() {
@@ -51,13 +55,13 @@ gulp.task("watch", function() {
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
 
-gulp.task("sprite", function() {
-  return gulp.src("source/img/inSprite-icons/**/*.svg")
+gulp.task("sprite", function () {
+  return gulp.src("build/img/vector/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
-    }))
+      }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/vector"));
 });
 
 gulp.task("html", function () {
@@ -69,19 +73,21 @@ gulp.task("html", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/raster/*.{jpg,png}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/raster"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"));
+  return gulp.src("source/img/raster/*.{jpg,png}")
+    .pipe(webp({
+      quality: 85
+    }))
+    .pipe(gulp.dest("build/img/webp"));
 });
 
 gulp.task("copy", function () {

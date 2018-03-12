@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>"Cat-Energy" - Каталог продукции</title>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
 
@@ -29,6 +32,7 @@
 
         <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Показать/Скрыть Меню</span>
+          <span class="toggle__btn"></span>
         </button>
 
         <ul class="main-nav__list">
@@ -363,16 +367,7 @@
         </div>
       </div>
 
-      <!-- <div class="contacts__map" id="map" aria-label="map"></div> -->
-
-      <div class="contacts__map-wrapper" id="map" aria-label="map">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </picture>
-      </div>
-
+      <div class="contacts__map" id="map" aria-label="map"></div>
     </section>
 
     <section class="page-footer__bottom page-footer__wrapper container">
@@ -389,23 +384,23 @@
         <ul class="social__list">
 
           <li class="social__item">
-            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Вконтакте">Вконтакте
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Вконтакте">Вконтакте
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" role="img">
                 <use xlink:href="#icon-vk-mobile"></use>
               </svg>
             </a>
           </li>
 
-          <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Инстаграмме">Instagram
+          <li class="social__item">
+            <a class="social__link social__link--ig" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Инстаграмме">Instagram
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" role="img">
                 <use xlink:href="#icon-insta-mobile"></use>
               </svg>
             </a>
           </li>
 
-          <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Фейсбуке">Facebook
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Переход на наш аккаунт в Фейсбуке">Facebook
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19" role="img">
                 <use xlink:href="#icon-fb-mobile"></use>
               </svg>
@@ -415,7 +410,7 @@
         </ul>
       </div>
 
-      <div class="pager-footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <h2 class="visually-hidden">Правообладатель</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на страницу Интенсивного онлайн-курса Профессиональный HTML и CSS (уровень 2) компании HTML Academy">
           HTML Academy
@@ -427,6 +422,11 @@
 
     </section>
   </footer>
+
+  <script src="js/dropdown-menu.js"></script>
+  <script src="js/map.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNzk22YYzqhtw8S_rcrO4sn7Gbc70_j-M&callback=initialize"></script>
 
 </body>
 </html>

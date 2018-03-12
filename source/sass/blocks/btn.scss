@@ -1,12 +1,13 @@
 .btn {
-  display: inline-block;
+  display: block;
   min-height: 40px;
   text-align: center;
   padding: 10px 20px;
   color: #ffffff;
   line-height: 20px;
-  border: none;
-  transition: all 0.5s ease-in;
+  transition: all 0.15s ease-in;
+  background-color: $green;
+  min-width: 260px;
 
   &:hover {
     background-color: #5eaa2f;

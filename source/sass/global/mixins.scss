@@ -12,6 +12,7 @@
 
 @mixin v-center {
   position: absolute;
+  content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -21,14 +22,30 @@
   border: $width solid $color;
 }
 
-@mixin bg-mobile {
+@mixin brdt($width, $color) {
+  border-top: $width solid $color;
+}
+
+@mixin bgmobile {
   @media (min-width: $bgmobile-width) {
+    @content;
+  }
+}
+
+@mixin mdmobile {
+  @media (min-width: $mdmobile-width) {
     @content;
   }
 }
 
 @mixin tablet {
   @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop-width) {
     @content;
   }
 }

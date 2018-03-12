@@ -4,12 +4,16 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
-  line-height: 24px;
+  line-height: 1;
   box-sizing: border-box;
 
   min-width: 320px;
   margin: 0;
   padding: 0;
+
+  background-color: #ffffff;
+
+  user-select: none;
 }
 
 *,
@@ -54,7 +58,9 @@ li {
   }
 }
 
-.visually-hidden {
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -72,4 +78,12 @@ li {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
 }

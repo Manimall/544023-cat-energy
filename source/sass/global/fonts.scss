@@ -6,6 +6,7 @@
   font-display: swap;
 
   src:
+    local("Oswald"),
     local("Oswald Regular"),
     local("Oswald-Regular"),
     url("../fonts/oswaldregular.woff2") format("woff2"),
@@ -20,7 +21,7 @@
   font-display: swap;
 
   src:
-    local("Oswald"),
+    //local("Oswald"),
     local("Oswald Medium"),
     local("Oswald-Medium"),
     url("../fonts/oswaldmedium.woff2") format("woff2"),

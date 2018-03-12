@@ -71,6 +71,7 @@
       width: 750px;
       left: -40px; //Отступ только для совпадения с макетом
       padding-right: 40px; //Для компенсации отстуа
+      overflow: visible;
     }
 
     &--after {
@@ -128,6 +129,7 @@
   text-transform: uppercase;
   color: $black;
   cursor: pointer;
+  user-select: none;
 
   @include tablet {
     padding: 6px 0;
@@ -137,6 +139,7 @@
 
     &:hover {
       border-bottom-style: solid;
+      color: $green;
     }
 
     &:active {

@@ -8,8 +8,8 @@
   var btnBefore = slider.querySelector(".slider__btn--before");
   var btnAfter = slider.querySelector(".slider__btn--after");
   var sliderWidth,
-    scaleWidth,
-    gripWidth;
+      scaleWidth,
+      gripWidth;
 
   var getElemWidth = function (elem) {
     return parseInt(getComputedStyle(elem).width, 10);

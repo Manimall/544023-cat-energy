@@ -161,11 +161,28 @@
 
   &:hover::before {
     width: 27px;
+    background-color: $green;
+  }
+
+  &:hover::after {
+    border-left-color: $green;
+  }
+
+  &:hover {
+    color: $green;
   }
 
   &:active {
     opacity: 0.3;
     transition: none;
+  }
+
+  &:active::before {
+    background-color: $green;
+  }
+
+  &:active::after {
+    border-left-color: $green;
   }
 
   @include tablet {

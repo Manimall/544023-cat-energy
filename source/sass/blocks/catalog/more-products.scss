@@ -80,7 +80,7 @@
   &:active .more-products__title {
     color: rgba(17, 17, 17, 0.5);
     text-shadow: none;
-    transititon: color 0.1s ease-in;
+    transition: color 0.1s ease-in;
   }
 
   @include tablet {

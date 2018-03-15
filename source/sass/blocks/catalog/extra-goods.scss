@@ -26,6 +26,7 @@
   background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $green 13px, $green 16px, transparent 16px, transparent 100%);
 
   span {
+    display: inline-block;
     padding: 0 20px;
     background-color: #ffffff;
   }

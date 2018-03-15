@@ -6,6 +6,10 @@
 
   <title>"Cat-Energy" - Подбор программы</title>
 
+  <link rel="preload" href="css/style.min.css" as="style">
+  <!-- <link rel="preload" href="js/main.min.js" as="script"> -->
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -151,7 +155,7 @@
         <div class="container">
           <div class="form-section__field form-section__field--textarea">
             <label class="form-section__item">
-              <textarea class="form-section__input form-section__input--textarea" name="Комментарий" id="Комментарий" cols="28" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="form-section__input form-section__input--textarea" name="Комментарий" id="Комментарий" cols="28" rows="5" maxlength="450" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
         </div>
@@ -274,6 +278,9 @@
   <script src="js/map.js"></script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNzk22YYzqhtw8S_rcrO4sn7Gbc70_j-M&callback=initialize"></script>
+  <script src="js/libs/picturefill.js"></script>
+  <script src="js/libs/svg4everybody.js"></script>
+  <script>svg4everybody();</script>
 
 </body>
 </html>

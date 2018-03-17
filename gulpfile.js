@@ -78,7 +78,7 @@ gulp.task("style", function() {
 
 gulp.task("mystyle", function () {
   return gulp.src("source/sass/style.scss")
-    .pipe(csscomb())
+    .pipe(csscomb("./csscomb.json"))
     .pipe(gulp.dest("source/sass"));
 });
 

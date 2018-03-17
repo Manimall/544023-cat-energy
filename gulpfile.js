@@ -123,7 +123,7 @@ gulp.task("html", function () {
 
 // Images optimization and copy in /build
 gulp.task("images", function() {
-  return gulp.src("source/img/raster/*")
+  return gulp.src("source/img/**/*.*")
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
@@ -139,7 +139,7 @@ gulp.task("images", function() {
     ],{
       verbose: true
     })))
-    .pipe(gulp.dest("build/img/raster"));
+    .pipe(gulp.dest("source/img/min"));
 });
 
 // Clearing the cache
@@ -166,12 +166,12 @@ gulp.task("webp", function () {
 
 gulp.task("copy-images", function() {
   return gulp.src([
-    "build/img/min/**/*.*"
+    "source/img/min/**/*.*"
     ], {
-      base: "build/img/min"
+      base: "source/img/min"
     })
       .pipe(gulp.dest("build/img"))
-    return del("build/img/min/");
+    //return del("build/img/min/");
 });
 
 gulp.task("svg", function () {
@@ -213,7 +213,8 @@ gulp.task("build", function (done) {
     "clean",
     "clearcache",
     "copy",
-    "images",
+    //"images", - идет отдельно, первым
+    "copy-images",
     "webp",
     "sprite",
     "mystyle",

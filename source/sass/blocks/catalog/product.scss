@@ -105,7 +105,7 @@
   color: #222222;
 
   @include bgmobile {
-    max-width: 165px;
+    max-width: 155px;
   }
 
   @include tablet {
@@ -160,6 +160,7 @@
 
   @include tablet {
     min-width: 248px;
+    flex: auto;
   }
 
   @include desktop {

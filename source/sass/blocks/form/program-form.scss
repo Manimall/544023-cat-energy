@@ -70,6 +70,9 @@
   cursor: pointer;
   text-transform: uppercase;
   font-family: $oswald;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 540px;
 
   @include tablet {
     margin-left: 40px;

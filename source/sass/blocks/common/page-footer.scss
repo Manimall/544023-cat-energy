@@ -9,10 +9,12 @@
     align-items: center;
     padding-top: 49px;
     padding-bottom: 47px;
+    min-height: 150px;
   }
 
   @include desktop {
     padding-top: 52px;
+    min-height: 144px;
   }
 }
 

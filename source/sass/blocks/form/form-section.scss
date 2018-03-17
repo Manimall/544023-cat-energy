@@ -13,7 +13,7 @@
 
     @include desktop {
       padding-bottom: 0;
-      flex: 1 0 46.5%;
+      flex: 1 1 44%;
     }
   }
 
@@ -30,7 +30,7 @@
 
     @include desktop {
       margin: 48px 0 27px 80px;
-      flex: 1 0 46.5%;
+      flex: 1 1 44%;
     }
   }
 }
@@ -201,6 +201,7 @@
   &--textarea {
     height: 150px;
     resize: none;
+    font-family: $oswald;
 
     @include tablet {
       height: 175px;
@@ -211,6 +212,18 @@
       margin-top: 16px;
     }
   }
+}
+
+.form-section__input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.form-section__input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .form-section__input-wrapper {

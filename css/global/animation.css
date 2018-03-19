@@ -1,0 +1,21 @@
+@-webkit-keyframes fadeInLeft {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeInLeft {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2xvYmFsL2FuaW1hdGlvbi5jc3MiLCJzb3VyY2VzIjpbImdsb2JhbC9hbmltYXRpb24uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxVQUFVLENBQVYsVUFBVTtFQUNSLEVBQUU7SUFDQSxTQUFTLEVBQUUsaUJBQWlCO0lBQzVCLE9BQU8sRUFBRSxDQUFDO0VBR1osSUFBSTtJQUNGLFNBQVMsRUFBRSxhQUFhO0lBQ3hCLE9BQU8sRUFBRSxDQUFDIn0= */

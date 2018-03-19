@@ -491,7 +491,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 400px; } }
+    height: 500px; } }
 
 @media (min-width: 1300px) {
   .contacts__text {
@@ -613,7 +613,7 @@ button {
       background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-tablet@2x.png"); } }
   @media (min-width: 1300px) {
     .contacts__map {
-      height: 400px;
+      height: 500px;
       background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-desktop@1x.png");
       background-position: calc(71.1% + (100vw - 100%) / 2) 51%, center; } }
   @media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {

@@ -7,7 +7,9 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
+
 var csscomb = require("gulp-csscomb");
+var csslint = require("gulp-csslint");
 
 var server = require("browser-sync").create();
 var rename = require("gulp-rename");
@@ -42,8 +44,10 @@ var ghpages = require("gh-pages");
 gulp.task("compress", function (cb) {
   pump([
     gulp.src("source/js/**/*.js"),
+    sourcemaps.init(),
     uglify(),
     rename({suffix: ".min"}),
+    sourcemaps.write(),
     gulp.dest("build/js")
     ], cb);
 });
@@ -51,8 +55,10 @@ gulp.task("compress", function (cb) {
 gulp.task("concat", ["compress"], function (cb) {
   pump([
     gulp.src(["source/js/dropdown-menu.js","source/js/map.js"]),
+    sourcemaps.init(),
     uglify(),
     concat("main.min.js"),
+    sourcemaps.write(),
     gulp.dest("build/js")
   ], cb);
 });
@@ -71,15 +77,14 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write())
-    //.pipe(csscomb())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-gulp.task("mystyle", function () {
-  return gulp.src("source/sass/style.scss")
-    .pipe(csscomb("./csscomb.json"))
-    .pipe(gulp.dest("source/sass"));
+gulp.task("csscomb", function () {
+  return gulp.src("build/css/**/*.css")
+    .pipe(csscomb("build/csscomb.json"))
+    .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("serve", function () {
@@ -140,6 +145,17 @@ gulp.task("images", function() {
       verbose: true
     })))
     .pipe(gulp.dest("source/img/min"));
+});
+
+gulp.task("del-images", function () {
+  return del("source/img/min");
+});
+
+gulp.task("minimg", function (done) {
+  run(
+    "del-images",
+    "images",
+    done);
 });
 
 // Clearing the cache
@@ -204,21 +220,31 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("cpcomb", function () {
+  return gulp.src([
+      "./csscomb.json"], {
+        base: "./"
+      })
+  .pipe(gulp.dest("build"));
+});
+
 gulp.task("clean", function () {
   return del("build");
 });
 
 gulp.task("build", function (done) {
   run(
+    //"del-images" - удаляем исходную папку со сжатыми img - идет отдельно, первым (альтернатива - minimg)
+    //"images" - заново сжимаем все img - идет отдельно, вторым (альтернатива - minimg)
     "clean",
     "clearcache",
     "copy",
-    //"images", - идет отдельно, первым
+    //"cpcomb",
     "copy-images",
     "webp",
     "sprite",
-    "mystyle",
     "style",
+    //"csscomb",// - запускается отдельно, при желании
     "html",
     "concat",
     done);

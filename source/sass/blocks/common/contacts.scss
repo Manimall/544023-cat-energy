@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 400px;
+    height: 500px;
   }
 }
 
@@ -136,7 +136,7 @@
   }
 
   @include desktop {
-    height: 400px;
+    height: 500px;
     background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-desktop@1x.png");
     background-position: calc(71.1% + (100vw - 100%) / 2) 51%, center;
 

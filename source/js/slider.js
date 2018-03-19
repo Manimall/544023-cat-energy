@@ -1,5 +1,7 @@
 (function () {
   var TABLET_WIDTH = 768;
+  var DESKTOP_WIDTH = 1300;
+  var LAPTOP_WIDTH = 1024;
   var slider = document.querySelector(".slider");
   var scale = slider.querySelector(".slider__scale");
   var grip = scale.querySelector(".slider__grip");
@@ -20,6 +22,17 @@
     before.style.width = "100%";
     after.style.width = "0";
     grip.style.marginLeft = "0";
+    grip.style.transition = "margin-left 2.5s ease-in-out";
+    before.style.transition = "width 2s ease-in-out";
+
+    if (viewport>=LAPTOP_WIDTH) {
+      grip.style.transition = "margin-left 3s ease-in-out";
+      before.style.transition = "width 3s ease-in-out";
+    }
+    else {
+      grip.style.transition = "margin-left 3s ease-in-out";
+      before.style.transition = "width 1.5s ease-in-out";
+    }
   };
 
   btnAfter.onclick = function (evt) {
@@ -27,6 +40,17 @@
     before.style.width = "0";
     after.style.width = "100%";
     grip.style.marginLeft = "calc(100% - " + gripWidth + "px)";
+    grip.style.transition = "margin-left 2.5s ease-in-out";
+    after.style.transition = "width 2s ease-in-out";
+
+    if (viewport>=LAPTOP_WIDTH) {
+      grip.style.transition = "margin-left 3s ease-in-out";
+      after.style.transition = "width 3s ease-in-out";
+    }
+    else {
+      grip.style.transition = "margin-left 1s ease-in-out";
+      after.style.transition = "width 1.5s ease-in-out";
+    }
   };
 
   grip.ondblclick = function () {
@@ -68,7 +92,7 @@
 
     document.onmouseup = function () {
       document.onmousemove = document.onmouseup = null;
-      grip.style.transition = "margin-left 0.3s ease-out";
+      grip.style.transition = "margin-left 0.2s ease-out";
     };
 
     return false;

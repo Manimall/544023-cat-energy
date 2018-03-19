@@ -1,91 +1,74 @@
-.social
-{
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+.social {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 
-    @include tablet
-    {
-        border: none;
-    }
+  @include tablet {
+    border: none;
+  }
 }
 
-.social__list
-{
-    display: flex;
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    justify-content: center;
-    align-items: center;
-    @include reset-list;
+  @include reset-list;
 }
 
-.social__item
-{
-    width: 21px;
-    margin: 0 18px;
+.social__item {
+  margin: 0 18px;
+  width: 21px;
 
-    @include tablet
-    {
-        width: 25px;
-        margin: 0 15px;
+  @include tablet {
+    margin: 0 15px;
+    width: 25px;
 
-        &:nth-child(2)
-        {
-            width: 19px;
-            margin: 0 18px;
-        }
+    &:nth-child(2) {
+      margin: 0 18px;
+      width: 19px;
     }
+  }
 }
 
-.social__link
-{
-    font-size: 0;
-    line-height: 0;
+.social__link {
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
 
-    display: inline-block;
+  svg {
+    fill: #666666;
+  }
 
-    svg
-    {
-        fill: #666;
+  &:hover svg {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vk svg {
+    @include tablet {
+      width: 30px;
+      height: 16px;
     }
+  }
 
-    &:hover svg
-    {
-        fill: $green;
+  &--ig svg {
+    width: 20px;
+
+    @include tablet {
+      width: 23px;
+      height: 23px;
     }
+  }
 
-    &:active
-    {
-        opacity: .3;
+  &--fb svg {
+    width: 12px;
+
+    @include tablet {
+      width: 14px;
+      height: 28px;
     }
-
-    &--vk svg
-    {
-        @include tablet
-        {
-            width: 30px;
-            height: 16px;
-        }
-    }
-
-    &--ig svg
-    {
-        width: 20px;
-
-        @include tablet
-        {
-            width: 23px;
-            height: 23px;
-        }
-    }
-
-    &--fb svg
-    {
-        width: 12px;
-
-        @include tablet
-        {
-            width: 14px;
-            height: 28px;
-        }
-    }
+  }
 }

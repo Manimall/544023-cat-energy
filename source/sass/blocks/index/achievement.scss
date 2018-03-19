@@ -1,87 +1,66 @@
-.achievement
-{
-    position: relative;
+.achievement {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0;
+  flex-grow: 1;
+  position: relative;
 
-    display: flex;
-    flex-direction: column-reverse;
+  & + & {
+    margin-left: 32px;
 
-    margin: 0;
-
-    align-items: center;
-    flex-grow: 1;
-
-    & + &
-    {
-        margin-left: 32px;
-
-        @include tablet
-        {
-            margin-left: 42px;
-        }
-        @include desktop
-        {
-            flex-grow: 0;
-        }
+    @include tablet {
+      margin-left: 42px;
     }
+
+    @include desktop {
+      flex-grow: 0;
+    }
+  }
 }
 
-.achievement__title
-{
-    font-family: $arial;
-    font-size: 12px;
-    line-height: 1;
+.achievement__title {
+  padding: 0 16px;
+  position: relative;
+  bottom: 9px;
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+  color: $darkgrey;
+  background-color: $grey;
 
-    position: relative;
-    bottom: 9px;
+  @include tablet {
+    padding: 0 6px;
+    font-size: 14px;
+    background-color: #ffffff;
 
-    padding: 0 16px;
+    br {
+      display: none;
+    }
+  }
 
-    text-align: center;
-    text-transform: lowercase;
-
-    color: $darkgrey;
+  @include desktop {
     background-color: $grey;
-
-    @include tablet
-    {
-        font-size: 14px;
-
-        padding: 0 6px;
-
-        background-color: #fff;
-
-        br
-        {
-            display: none;
-        }
-    }
-    @include desktop
-    {
-        background-color: $grey;
-    }
+  }
 }
 
-.achievement__value
-{
-    font-size: 24px;
+.achievement__value {
+  margin: 0;
+  padding: 15px 20px;
+  min-width: 121px;
+  font-size: 24px;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  border: 1px solid $border-grey;
+  border-radius: 3px;
 
-    min-width: 121px;
-    margin: 0;
-    padding: 15px 20px;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: $black;
-    border: 1px solid $border-grey;
-    border-radius: 3px;
-
-    @include tablet
-    {
-        font-size: 30px;
-        line-height: 1.23;
-
-        min-width: 162px;
-        padding-bottom: 20px;
-    }
+  @include tablet {
+    padding-bottom: 20px;
+    min-width: 162px;
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }

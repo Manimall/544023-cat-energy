@@ -13,7 +13,6 @@
   "leading-zero": true,
   "quotes": "double",
   "remove-empty-rulesets": true,
-  //"sort-order-fallback": "abc",
   "space-before-colon": "",
   "space-after-colon": " ",
   "space-before-combinator": " ",
@@ -28,6 +27,7 @@
   "tab-size": 2,
   "unitless-zero": true,
   "vendor-prefix-align": true,
+  "lines-between-rulesets": 1,
   "sort-order": [
     [
       "content",

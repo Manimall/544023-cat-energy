@@ -1,160 +1,127 @@
-.promo
-{
-    background-color: #61a63c;
-    background-image: linear-gradient(to top, #fff 97px, transparent 97px),
-    url('../img/raster/index-background-mobile@1x.jpg'),
-    linear-gradient(to top, #fff 197px, #61a63c 197px);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100%;
+.promo {
+  background-image:
+    linear-gradient(to top, #ffffff 97px, transparent 97px),
+    url("../img/raster/index-background-mobile@1x.jpg"),
+    linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #61a63c;
+  background-size: 100%;
 
-    @include retina
-    {
-        background-image: linear-gradient(to top, #fff 97px, transparent 97px),
-        url('../img/raster/index-background-mobile@2x.jpg'),
-        linear-gradient(to top, #fff 197px, #61a63c 197px);
-    }
-    @include tablet
-    {
-        background: #fff;
-    }
-    @include desktop
-    {
-        min-height: 560px;
+  @include retina {
+    background-image:
+      linear-gradient(to top, #ffffff 97px, transparent 97px),
+      url("../img/raster/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  }
 
-        background: transparent;
-    }
+  @include tablet {
+    background: #ffffff;
+  }
+
+  @include desktop {
+    background: transparent;
+    min-height: 560px;
+  }
 }
 
-.promo__wrapper
-{
-    position: relative;
+.promo__wrapper {
+  position: relative;
+  padding-bottom: 22px;
+  text-align: center;
+  color: #ffffff;
 
-    padding-bottom: 22px;
-
-    text-align: center;
-
-    color: #fff;
-
-    @include tablet
-    {
-        display: flex;
-        flex-direction: column;
-
-        padding: 0 20px;
-
-        text-align: left;
-
-        color: $black;
-
-        align-items: flex-start;
-    }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    text-align: left;
+    color: $black;
+  }
 }
 
-.promo__content
-{
-    @include tablet
-    {
-        margin-left: 100px;
-    }
+.promo__content {
+  @include tablet {
+    margin-left: 100px;
+  }
 }
 
-.promo__title
-{
-    font-size: 36px;
-    font-weight: 500;
+.promo__title {
+  padding: 27px 0 20px;
+  font-size: 36px;
+  font-weight: 500;
 
-    padding: 27px 0 20px;
+  @include tablet {
+    padding: 35px 0;
+    font-size: 60px;
+  }
 
-    @include tablet
-    {
-        font-size: 60px;
-
-        padding: 35px 0;
-    }
-    @include desktop
-    {
-        margin-top: 34px;
-        padding-top: 50px;
-    }
+  @include desktop {
+    margin-top: 34px;
+    padding-top: 50px;
+  }
 }
 
-.promo__text
-{
-    font-size: 14px;
+.promo__text {
+  margin-top: 5px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  text-transform: uppercase;
 
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 15px;
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
+}
+
+.promo__img-wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    width: 100%;
+  }
+}
+
+.promo__img {
+  margin: 0 auto;
+  margin-bottom: 2px;
+  height: auto;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+
+  @include tablet {
+    margin-top: -80px;
+    width: 709px;
+    height: 609px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 490px;
     margin-top: 5px;
-    margin-bottom: 28px;
-
-    text-transform: uppercase;
-
-    @include tablet
-    {
-        font-size: 20px;
-        line-height: 22px;
-
-        padding-bottom: 15px;
-    }
-    @include desktop
-    {
-        padding-bottom: 25px;
-    }
+    margin-bottom: 50px;
+    width: 552px;
+    height: 499px;
+  }
 }
 
-.promo__img-wrapper
-{
-    @include tablet
-    {
-        display: flex;
+.promo__btn {
+  order: 1;
+  font-size: 14px;
 
-        width: 100%;
-
-        justify-content: center;
-        order: 2;
-    }
-}
-
-.promo__img
-{
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 2px;
-
-    animation-name: fadeInLeft;
-    animation-duration: 1.5s;
-
-    @include tablet
-    {
-        width: 709px;
-        height: 609px;
-        margin-top: -80px;
-    }
-    @include desktop
-    {
-        position: absolute;
-        top: 0;
-        left: 490px;
-
-        width: 552px;
-        height: 499px;
-        margin-top: 5px;
-        margin-bottom: 50px;
-    }
-}
-
-.promo__btn
-{
-    font-size: 14px;
-
-    order: 1;
-    @include tablet
-    {
-        font-size: 20px;
-
-        z-index: 2;
-
-        margin-bottom: 3px;
-        margin-left: 100px;
-        padding: 16px 27px;
-    }
+  @include tablet {
+    font-size: 20px;
+    padding: 16px 27px;
+    z-index: 2;
+    margin-left: 100px;
+    margin-bottom: 3px;
+  }
 }

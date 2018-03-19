@@ -1,74 +1,91 @@
-.social {
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+.social
+{
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
 
-  @include tablet {
-    border: none;
-  }
+    @include tablet
+    {
+        border: none;
+    }
 }
 
-.social__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.social__list
+{
+    display: flex;
 
-  @include reset-list;
+    justify-content: center;
+    align-items: center;
+    @include reset-list;
 }
 
-.social__item {
-  margin: 0 18px;
-  width: 21px;
+.social__item
+{
+    width: 21px;
+    margin: 0 18px;
 
-  @include tablet {
-    margin: 0 15px;
-    width: 25px;
+    @include tablet
+    {
+        width: 25px;
+        margin: 0 15px;
 
-    &:nth-child(2) {
-      margin: 0 18px;
-      width: 19px;
+        &:nth-child(2)
+        {
+            width: 19px;
+            margin: 0 18px;
+        }
     }
-  }
 }
 
-.social__link {
-  display: inline-block;
-  font-size: 0;
-  line-height: 0;
+.social__link
+{
+    font-size: 0;
+    line-height: 0;
 
-  svg {
-    fill: #666666;
-  }
+    display: inline-block;
 
-  &:hover svg {
-    fill: $green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  &--vk svg {
-    @include tablet {
-      width: 30px;
-      height: 16px;
+    svg
+    {
+        fill: #666;
     }
-  }
 
-  &--ig svg {
-    width: 20px;
-
-    @include tablet {
-      width: 23px;
-      height: 23px;
+    &:hover svg
+    {
+        fill: $green;
     }
-  }
 
-  &--fb svg {
-    width: 12px;
-
-    @include tablet {
-      width: 14px;
-      height: 28px;
+    &:active
+    {
+        opacity: .3;
     }
-  }
+
+    &--vk svg
+    {
+        @include tablet
+        {
+            width: 30px;
+            height: 16px;
+        }
+    }
+
+    &--ig svg
+    {
+        width: 20px;
+
+        @include tablet
+        {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    &--fb svg
+    {
+        width: 12px;
+
+        @include tablet
+        {
+            width: 14px;
+            height: 28px;
+        }
+    }
 }

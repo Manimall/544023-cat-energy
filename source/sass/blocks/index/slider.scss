@@ -1,208 +1,265 @@
-.slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 34px;
-
-  @include tablet {
-    margin: 0 (-$tablet-pads);
-    background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
-    overflow: hidden;
-  }
-
-  @include desktop {
-    padding-bottom: 35px;
-    margin: 0;
-    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
-    overflow: visible;
-  }
-}
-
-.slider__images {
-  position: relative;
-  margin: 0 (-$mobile-pads);
-  width: 320px;
-  height: 240px;
-
-  @include tablet {
-    margin: 10px 0 0;
-    width: 680px;
-    height: 517px;
-  }
-
-  @include desktop {
-    width: 650px;
-  }
-}
-
-.slider__image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  transition: width 0.4s ease-out;
-
-  &--after {
-    display: flex;
-    justify-content: flex-end;
-    width: 0;
-    right: 0;
-  }
-
-  @include tablet {
+.slider
+{
     display: flex;
     flex-direction: column;
-    width: 50%;
 
-    &--after {
-      align-items: flex-end;
-      box-shadow: 400px 570px 0 400px #eaeaea;
-      background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
+    padding-bottom: 34px;
 
-      img {
-        z-index: 1;
-      }
+    align-items: center;
+    @include tablet
+    {
+        overflow: hidden;
+
+        margin: 0 (-$tablet-pads);
+
+        background-image: linear-gradient(#fff 0, #fff 180px, $grey 180px, $grey 100%);
     }
-  }
+    @include desktop
+    {
+        overflow: visible;
 
-  @include desktop {
-    &--before {
-      width: 750px;
-      left: -40px; //Отступ только для совпадения с макетом
-      padding-right: 40px; //Для компенсации отстуа
-      overflow: visible;
+        margin: 0;
+        padding-bottom: 35px;
+
+        background-image: linear-gradient(#fff 0, #fff 200px, $grey 200px, $grey 100%);
+    }
+}
+
+.slider__images
+{
+    position: relative;
+
+    width: 320px;
+    height: 240px;
+    margin: 0 (-$mobile-pads);
+
+    @include tablet
+    {
+        width: 680px;
+        height: 517px;
+        margin: 10px 0 0;
+    }
+    @include desktop
+    {
+        width: 650px;
+    }
+}
+
+.slider__image
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    transition: width .4s ease-out;
+
+    @include tablet
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+
+        &--after
+        {
+            background-image: linear-gradient(#fff 0, #fff 170px, #eaeaea 170px, #eaeaea 100%);
+            box-shadow: 400px 570px 0 400px #eaeaea;
+
+            align-items: flex-end;
+
+            img
+            {
+                z-index: 1;
+            }
+        }
+    }
+    @include desktop
+    {
+        &--before
+        {
+            left: -40px; //Отступ только для совпадения с макетом
+
+            overflow: visible;
+
+            width: 750px;
+            padding-right: 40px; //Для компенсации отстуа
+        }
+
+        &--after
+        {
+            background-image: linear-gradient(#fff 0, #fff 190px, #eaeaea 190px, #eaeaea 100%);
+            box-shadow: 400px 590px 0 400px #eaeaea;
+        }
     }
 
-    &--after {
-      box-shadow: 400px 590px 0 400px #eaeaea;
-      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
-    }
-  }
+    &--after
+    {
+        right: 0;
 
-  img {
-    max-width: inherit;
+        display: flex;
 
-    @include tablet {
-      width: 680px;
-      height: 517px;
+        justify-content: flex-end;
     }
 
-    @include desktop {
-      width: 690px;
+    img
+    {
+        max-width: inherit;
+
+        @include tablet
+        {
+            width: 680px;
+            height: 517px;
+        }
+        @include desktop
+        {
+            width: 690px;
+        }
     }
-  }
 }
 
 .slider__before:checked ~ .slider__images .slider__image--before,
-.slider__after:checked ~ .slider__images .slider__image--after {
-  width: 100%;
+.slider__after:checked ~ .slider__images .slider__image--after
+{
+    width: 100%;
 }
 
 .slider__before:checked ~ .slider__images .slider__image--after,
-.slider__after:checked ~ .slider__images .slider__image--before {
-  width: 0;
+.slider__after:checked ~ .slider__images .slider__image--before
+{
+    width: 0;
 }
 
-.slider__actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  padding: 2px;
-  z-index: 1;
+.slider__actions
+{
+    z-index: 1;
 
-  @include tablet {
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
+    display: flex;
 
-  @include desktop {
-    margin-top: 33px;
-  }
-}
+    margin-top: 30px;
+    padding: 2px;
 
-.slider__btn {
-  margin: 0 20px;
-  line-height: 1.25;
-  text-align: center;
-  text-transform: uppercase;
-  color: $black;
-  cursor: pointer;
-  user-select: none;
-
-  @include tablet {
-    padding: 6px 0;
-    font-size: 20px;
-    line-height: 1;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-
-    &:hover {
-      border-bottom-style: solid;
-      color: $green;
+    justify-content: center;
+    align-items: center;
+    @include tablet
+    {
+        margin-top: 15px;
+        margin-bottom: 30px;
     }
-
-    &:active {
-      border-bottom: 0;
+    @include desktop
+    {
+        margin-top: 33px;
     }
-  }
 }
 
-.slider__scale {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 6px;
-  width: 85px;
-  height: 14px;
-  border-radius: 6px;
-  background-color: #ffffff;
-  border: 1px solid $border-grey;
-  box-sizing: border-box;
+.slider__btn
+{
+    line-height: 1.25;
 
-  @include tablet {
-    padding: 4px 0;
-    width: 428px;
-    height: 6px;
-    background-color: $border-grey;
-    border-color: $border-grey;
-  }
+    margin: 0 20px;
+
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $black;
+
+    @include tablet
+    {
+        font-size: 20px;
+        line-height: 1;
+
+        padding: 6px 0;
+
+        border-bottom: 1px dotted rgba(0, 0, 0, .3);
+
+        &:hover
+        {
+            color: $green;
+            border-bottom-style: solid;
+        }
+
+        &:active
+        {
+            border-bottom: 0;
+        }
+    }
 }
 
-.slider__grip {
-  flex-shrink: 0;
-  display: block;
-  width: 35px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: $green;
-  cursor: pointer;
-  transition: margin-left 0.35s ease-out;
+.slider__scale
+{
+    display: inline-flex;
 
-  @include tablet {
-    margin-left: calc(50% - 17px);
-    width: 34px;
-    height: 34px;
-    background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
-    border: 1px solid $border-grey;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
+    width: 85px;
+    height: 14px;
+    padding: 4px 6px;
 
-    &:hover {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-    }
+    border: 1px solid $border-grey;
+    border-radius: 6px;
+    background-color: #fff;
 
-    &:active {
-      border: 2px solid $green;
-      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    @include tablet
+    {
+        width: 428px;
+        height: 6px;
+        padding: 4px 0;
+
+        border-color: $border-grey;
+        background-color: $border-grey;
     }
-  }
 }
 
-.slider__before:checked ~ .slider__actions .slider__grip {
-  margin-left: 0;
+.slider__grip
+{
+    display: block;
+
+    width: 35px;
+    height: 6px;
+
+    cursor: pointer;
+    transition: margin-left .35s ease-out;
+
+    border-radius: 3px;
+    background-color: $green;
+
+    flex-shrink: 0;
+    @include tablet
+    {
+        box-sizing: border-box;
+        width: 34px;
+        height: 34px;
+        margin-left: calc(50% - 17px);
+
+        border: 1px solid $border-grey;
+        border-radius: 50%;
+        background-image: radial-gradient($green 0, $green 4px, #fff 5px, #fff 100%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+
+        &:hover
+        {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+        }
+
+        &:active
+        {
+            border: 2px solid $green;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
+        }
+    }
 }
 
-.slider__after:checked ~ .slider__actions .slider__grip {
-  margin-left: calc(100% - 34px);
+.slider__before:checked ~ .slider__actions .slider__grip
+{
+    margin-left: 0;
+}
+
+.slider__after:checked ~ .slider__actions .slider__grip
+{
+    margin-left: calc(100% - 34px);
 }

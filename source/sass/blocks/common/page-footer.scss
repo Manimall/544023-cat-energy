@@ -1,72 +1,89 @@
-.page-footer {
-  background-color: $grey;
+.page-footer
+{
+    background-color: $grey;
 }
 
-.page-footer__bottom {
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 49px;
-    padding-bottom: 47px;
-    min-height: 150px;
-  }
+.page-footer__bottom
+{
+    @include tablet
+    {
+        display: flex;
 
-  @include desktop {
-    padding-top: 52px;
-    min-height: 144px;
-  }
+        min-height: 150px;
+        padding-top: 49px;
+        padding-bottom: 47px;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include desktop
+    {
+        min-height: 144px;
+        padding-top: 52px;
+    }
 }
 
 .page-footer__logo,
 .page-footer__social,
-.page-footer__copyright {
-  padding: 20px 0;
+.page-footer__copyright
+{
+    padding: 20px 0;
 
-  @include tablet {
-    padding: 0;
-  }
+    @include tablet
+    {
+        padding: 0;
+    }
 }
 
-.page-footer__logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 29px;
-  padding-bottom: 20px;
-  height: 45px;
-  box-sizing: content-box;
+.page-footer__logo
+{
+    position: relative;
 
-  svg {
-    fill: #111111;
-  }
+    display: flex;
 
-  &:hover {
-    opacity: 0.8;
-  }
+    box-sizing: content-box;
+    height: 45px;
+    padding-top: 29px;
+    padding-bottom: 20px;
 
-  &:active {
-    opacity: 0.6;
-  }
+    align-items: center;
+    @include tablet
+    {
+        margin-right: 30px;
+        padding: 0;
+    }
 
-  @include tablet {
-    padding: 0;
-    margin-right: 30px;
-  }
+    svg
+    {
+        fill: #111;
+    }
+
+    &:hover
+    {
+        opacity: .8;
+    }
+
+    &:active
+    {
+        opacity: .6;
+    }
 }
 
-.page-footer__logo:hover svg {
-  fill: $green;
+.page-footer__logo:hover svg
+{
+    fill: $green;
 }
 
-.page-footer__logo-link {
-  margin: auto;
+.page-footer__logo-link
+{
+    margin: auto;
 
-  @include tablet {
-    width: 128px;
-  }
-
-  @include desktop {
-    height: 22px;
-  }
+    @include tablet
+    {
+        width: 128px;
+    }
+    @include desktop
+    {
+        height: 22px;
+    }
 }

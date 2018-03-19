@@ -42,8 +42,10 @@ var ghpages = require("gh-pages");
 gulp.task("compress", function (cb) {
   pump([
     gulp.src("source/js/**/*.js"),
+    sourcemaps.init(),
     uglify(),
     rename({suffix: ".min"}),
+    sourcemaps.write(),
     gulp.dest("build/js")
     ], cb);
 });
@@ -51,8 +53,10 @@ gulp.task("compress", function (cb) {
 gulp.task("concat", ["compress"], function (cb) {
   pump([
     gulp.src(["source/js/dropdown-menu.js","source/js/map.js"]),
+    sourcemaps.init(),
     uglify(),
     concat("main.min.js"),
+    sourcemaps.write(),
     gulp.dest("build/js")
   ], cb);
 });
@@ -77,7 +81,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("mystyle", function () {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src("source/sass/**/*.scss")
     .pipe(csscomb("./csscomb.json"))
     .pipe(gulp.dest("source/sass"));
 });

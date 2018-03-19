@@ -1,74 +1,94 @@
-.promotion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 0 30px;
-  background-image: url("../img/raster/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 634px;
-  margin: 0 auto;
-
-  @include retina {
-    background-image: url("../img/raster/gift-photo-mobile@2x.jpg");
-  }
-
-  @include tablet {
-    max-width: 708px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 25px;
-    background-image: url("../img/raster/gift-photo-tablet@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/raster/gift-photo-tablet@2x.jpg");
-    }
-  }
-
-  @include desktop {
+.promotion
+{
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background-image: url("../img/raster/gift-photo-desktop@1x.jpg");
 
-    @include retina {
-      background-image: url("../img/raster/gift-photo-desktop@2x.jpg");
+    max-width: 634px;
+    margin: 0 auto;
+    padding: 15px 0 30px;
+
+    background-image: url('../img/raster/gift-photo-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    align-items: center;
+    @include retina
+    {
+        background-image: url('../img/raster/gift-photo-mobile@2x.jpg');
     }
-  }
+    @include tablet
+    {
+        flex-direction: row;
 
-  &::before {
-    content: "";
-    margin: 50px 0 50px;
-    display: block;
-    width: 240px;
-    height: 60px;
-    background: url("../img/vector/icon-gift.svg") no-repeat center;
-  }
+        max-width: 708px;
+        padding-bottom: 25px;
 
-  @include desktop {
-    width: 245px;
-    margin-right: 0;
-  }
+        background-image: url('../img/raster/gift-photo-tablet@1x.jpg');
+
+        justify-content: space-between;
+        @include retina
+        {
+            background-image: url('../img/raster/gift-photo-tablet@2x.jpg');
+        }
+    }
+    @include desktop
+    {
+        flex-direction: column;
+
+        background-image: url('../img/raster/gift-photo-desktop@1x.jpg');
+
+        justify-content: flex-start;
+        @include retina
+        {
+            background-image: url('../img/raster/gift-photo-desktop@2x.jpg');
+        }
+    }
+    @include desktop
+    {
+        width: 245px;
+        margin-right: 0;
+    }
+
+    &::before
+    {
+        display: block;
+
+        width: 240px;
+        height: 60px;
+        margin: 50px 0 50px;
+
+        content: '';
+
+        background: url('../img/vector/icon-gift.svg') no-repeat center;
+    }
 }
 
-.promotion__text {
-  flex-grow: 1;
-  margin: 15px 0;
-  text-align: center;
-  font-family: $arial;
-  line-height: 18px;
+.promotion__text
+{
+    font-family: $arial;
+    line-height: 18px;
 
-  color: #ffffff;
+    margin: 15px 0;
 
-  @include tablet {
-    flex-grow: 0;
-    margin-top: 25px;
-    width: 285px;
-    text-align: left;
-  }
-
-  @include desktop {
-    margin-top: 15px;
     text-align: center;
-  }
+
+    color: #fff;
+
+    flex-grow: 1;
+    @include tablet
+    {
+        width: 285px;
+        margin-top: 25px;
+
+        text-align: left;
+
+        flex-grow: 0;
+    }
+    @include desktop
+    {
+        margin-top: 15px;
+
+        text-align: center;
+    }
 }

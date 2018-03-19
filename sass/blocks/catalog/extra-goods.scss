@@ -1,0 +1,173 @@
+.extra-goods {
+  padding: 0 0 35px;
+
+  @include tablet {
+    padding-bottom: 75px;
+  }
+  @include desktop {
+    padding-bottom: 85px;
+  }
+}
+
+.extra-goods__wrapper {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.extra-goods__title {
+  position: relative;
+
+  margin: 29px 0 33px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $green 13px, $green 16px, transparent 16px, transparent 100%);
+
+  @include tablet {
+    margin-top: 37px;
+    margin-bottom: 80px;
+    padding: 0 calc((100vw - 708px) / 2);
+
+    font-size: 36px;
+
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $green 22px, $green 25px, transparent 25px, transparent 100%);
+
+    span {
+      padding: 0 36px;
+    }
+  }
+  @include desktop {
+    margin-top: 45px;
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 20px;
+
+    background-color: #ffffff;
+  }
+}
+
+.extra-goods__list {
+  margin-bottom: 39px;
+
+  @include reset-list;
+  @include tablet {
+    margin-bottom: 69px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.extra-goods__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 634px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid $border-grey;
+
+  @include tablet {
+    align-content: center;
+    align-items: center;
+    max-width: 708px;
+    padding: 16px 36px 12px;
+
+    border-right: 1px solid $border-grey;
+    border-left: 1px solid $border-grey;
+  }
+  @include desktop {
+    min-width: 895px;
+    max-width: 895px;
+    padding: 15px 0 16px;
+
+    border-right: 0;
+    border-left: 0;
+  }
+
+  &:first-child {
+    border-top: 1px solid $border-grey;
+  }
+}
+
+.extra-goods__name {
+  margin: 13px 0;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin: 10px 0 10px;
+
+    font-size: 20px;
+  }
+  @include desktop {
+    width: 32%;
+  }
+}
+
+.extra-goods__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 11px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: $darkgrey;
+
+  @include tablet {
+    width: auto;
+    margin-top: 8px;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  @include desktop {
+    width: 34%;
+  }
+}
+
+.extra-goods__price {
+  flex-shrink: 0;
+  width: 95px;
+
+  text-align: right;
+
+  @include desktop {
+    width: 80px;
+    margin-right: 20px;
+
+    text-align: left;
+  }
+}
+
+.extra-goods__btn {
+  flex: 1 0 100%;
+  min-width: 280px;
+  max-width: 768px;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 15px 0;
+  }
+  @include desktop {
+    flex: 0 0 245px;
+    min-width: 245px;
+    margin: 0;
+  }
+}

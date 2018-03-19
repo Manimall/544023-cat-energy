@@ -1,0 +1,176 @@
+.product__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 480px;
+  margin: 0 auto;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.product__link-img {
+  display: flex;
+  flex: 1 0 auto;
+
+  @include tablet {
+    align-items: flex-end;
+    width: 100%;
+    height: 118px;
+    padding-bottom: 33px;
+  }
+}
+
+.product__img {
+  display: flex;
+  flex: 4 0 50%;
+  justify-content: center;
+  height: auto;
+
+  @include tablet {
+    &:hover {
+      transform: translateY(10px) scale(1.1);
+
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:active {
+      transform: translateY(10px) scale(0.9);
+
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &:hover {
+    transform: translateY(4px) scale(1.05);
+
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:active {
+    transform: scale(0.9);
+
+    transition: transform 0.2s ease-in-out;
+  }
+
+  & > picture {
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+
+  & > picture img {
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.product__content {
+  z-index: 2;
+
+  flex: 0 0 37%;
+  min-width: 140px;
+  max-width: 165px;
+
+  @include tablet {
+    flex: 1 0 auto;
+    align-self: stretch;
+    max-width: unset;
+    padding-top: 2px;
+
+    background-color: $grey;
+  }
+}
+
+.product__link-title {
+  color: #222222;
+
+  &:hover .product__title {
+    color: $green;
+  }
+
+  &:active .product__title {
+    color: $green;
+
+    opacity: 0.6;
+  }
+}
+
+.product__title {
+  width: 100%;
+  max-width: 102px;
+  margin: 0;
+  padding-bottom: 10px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+
+  @include bgmobile {
+    max-width: 155px;
+  }
+  @include tablet {
+    margin: 0 auto;
+
+    font-size: 20px;
+    text-align: center;
+  }
+  @include desktop {
+    width: 80%;
+  }
+}
+
+.product__info {
+  width: 100%;
+
+  font-family: $arial;
+  color: $darkgrey;
+
+  @include tablet {
+    margin-top: 10px;
+    margin-bottom: 33px;
+
+    & tr {
+      border-bottom: 1px solid $border-grey;
+    }
+
+    & td {
+      padding: 8px 0;
+
+      font-size: 16px;
+      line-height: 15px;
+    }
+  }
+
+  & td {
+    padding: 0;
+
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  & td:last-child {
+    text-align: right;
+  }
+}
+
+.product__btn {
+  z-index: 2;
+
+  flex: 1 0 100%;
+  min-width: 280px;
+  max-width: 480px;
+  margin: 0 auto;
+
+  @include tablet {
+    flex: auto;
+    min-width: 248px;
+  }
+  @include desktop {
+    min-width: 169px;
+  }
+}

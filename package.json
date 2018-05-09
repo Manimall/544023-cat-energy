@@ -59,7 +59,7 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
-    "node": "8.9"
+    "node": "10"
   },
   "dependencies": {
     "david": "^11.0.0",

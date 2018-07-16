@@ -31,7 +31,7 @@
     "gulp-webp": "^3.0.0",
     "imagemin-pngquant": "^5.1.0",
     "postcss-reporter": "^5.0.0",
-    "postcss-scss": "^1.0.4",
+    "postcss-scss": "^2.0.0",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "^9.1.3",

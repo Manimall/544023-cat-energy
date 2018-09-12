@@ -60,6 +60,6 @@ git clone SSH-адрес_вашего_форка
 [travis-url]: https://travis-ci.org/Manimall/cat-energy
 [dependency-image]: https://david-dm.org/Manimall/cat-energy/dev-status.svg?style=flat-square
 [dependency-url]: https://david-dm.org/Manimall/cat-energy?type=dev
-[Greenkeeper badge](https://badges.greenkeeper.io/Manimall/cat-energy.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/cat-energy.svg)](https://greenkeeper.io/)
 
 <!-- [![devDependencies Status](https://david-dm.org/Manimall/cat-energy/dev-status.svg)](https://david-dm.org/Manimall/544023-cat-energy?type=dev) -->

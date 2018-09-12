@@ -58,8 +58,8 @@ git clone SSH-адрес_вашего_форка
 
 [travis-image]: https://travis-ci.org/Manimall/cat-energy.svg?branch=master
 [travis-url]: https://travis-ci.org/Manimall/cat-energy
-[dependency-image]: https://david-dm.org/Manimall/cat-energy/master/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/Manimall/cat-energy/master?type=dev
+[dependency-image]: https://david-dm.org/Manimall/cat-energy/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/Manimall/cat-energy?type=dev
 
 
 <!-- [![devDependencies Status](https://david-dm.org/Manimall/cat-energy/dev-status.svg)](https://david-dm.org/Manimall/544023-cat-energy?type=dev) -->

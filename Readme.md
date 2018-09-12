@@ -1,6 +1,6 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/544023-cat-energy.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/cat-energy.svg)](https://greenkeeper.io/)
 
 * Студент: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
@@ -58,8 +58,8 @@ git clone SSH-адрес_вашего_форка
 
 [travis-image]: https://travis-ci.org/Manimall/cat-energy.svg?branch=master
 [travis-url]: https://travis-ci.org/Manimall/cat-energy
-[dependency-image]: https://david-dm.org/Manimall/544023-cat-energy/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/Manimall/544023-cat-energy?type=dev
+[dependency-image]: https://david-dm.org/Manimall/cat-energy/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/Manimall/cat-energy?type=dev
 
 
-[![devDependencies Status](https://david-dm.org/Manimall/544023-cat-energy/dev-status.svg)](https://david-dm.org/Manimall/544023-cat-energy?type=dev)
+<!-- [![devDependencies Status](https://david-dm.org/Manimall/cat-energy/dev-status.svg)](https://david-dm.org/Manimall/544023-cat-energy?type=dev) -->

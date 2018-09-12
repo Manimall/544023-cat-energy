@@ -37,10 +37,6 @@ var del = require("del");
 
 var ghpages = require("gh-pages");
 
-// var onError = function (err) {
-// console.log(err);
-// };
-
 gulp.task("compress", function (cb) {
   pump([
     gulp.src("source/js/**/*.js"),

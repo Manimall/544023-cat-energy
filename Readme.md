@@ -3,8 +3,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/cat-energy.svg)](https://greenkeeper.io/)
 
 * Студент: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
-* Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
-
+<!-- * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023). -->
+<!-- 
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
@@ -54,7 +54,7 @@ git clone SSH-адрес_вашего_форка
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
 
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru).
+Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru). -->
 
 [travis-image]: https://travis-ci.org/Manimall/cat-energy.svg?branch=master
 [travis-url]: https://travis-ci.org/Manimall/cat-energy

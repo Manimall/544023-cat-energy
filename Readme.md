@@ -1,4 +1,4 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Кэт энерджи» [![Build status]] [![Dependency status]]
 
 Made by:[Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023).
 <!-- * Наставник: [Max Kravchenko](https://up.htmlacademy.ru/adaptive/13/user/544023). -->
@@ -55,7 +55,7 @@ git clone SSH-адрес_вашего_форка
 Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru). -->
 
 [![Build Status](https://travis-ci.org/Manimall/cat-energy.svg?branch=master)](https://travis-ci.org/Manimall/cat-energy)
-[![devDependenciesStatus] (https://david-dm.org/Manimall/cat-energy/dev-status.svg?style=flat-square)](https://david-dm.org/Manimall/cat-energy?type=dev)
+[![devDependencies Status](https://david-dm.org/Manimall/cat-energy/dev-status.svg?style=flat-square)](https://david-dm.org/Manimall/cat-energy?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Manimall/cat-energy.svg)](https://greenkeeper.io/)
 
 <!-- [![devDependencies Status](https://david-dm.org/Manimall/cat-energy/dev-status.svg)](https://david-dm.org/Manimall/544023-cat-energy?type=dev) -->

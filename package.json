@@ -65,7 +65,7 @@
     "david": "^11.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-pngquant": "^1.0.12",
-    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "pump": "^3.0.0"
   }
 }

@@ -29,7 +29,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "gulp-webp": "^3.0.0",
-    "imagemin-pngquant": "^6.0.0",
+    "imagemin-pngquant": "^6.0.1",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "posthtml-include": "^1.1.0",

@@ -62,7 +62,7 @@
     "node": "8.9"
   },
   "dependencies": {
-    "david": "^11.0.0",
+    "david": "^12.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-pngquant": "^1.0.12",
     "imagemin-jpeg-recompress": "^5.1.0",

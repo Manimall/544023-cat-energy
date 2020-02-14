@@ -64,7 +64,7 @@
   "dependencies": {
     "david": "^11.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-pngquant": "^1.0.12",
+    "gulp-pngquant": "^1.0.13",
     "imagemin-jpeg-recompress": "^5.1.0",
     "pump": "^3.0.0"
   }
